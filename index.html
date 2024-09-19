@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr TV Sajeev</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap">    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><br>tvsajeev.in</h1>
+            <div class="mobile-nav" onclick="toggleDropdown()">
+                <div class="dots"></div>
+                <div class="dots"></div>
+                <div class="dots"></div>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="https://tvsajeev.com">HOME</a></li>
+                    <li><a href="https://tvsajeev.com">BLOGS</a></li>
+                    <li><a href="https://tvsajeev.com">PODCASTS</a></li>
+                    <li><a href="https://tvsajeev.com">VIDEOS</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="content">
+            <div class="overlay-image">
+                <img src="assets/Sajeev1 (1).png" alt="Dr TV Sajeev">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="https://tvsajeev.com">HOME</a></li>
+                    <li><a href="https://tvsajeev.com">BLOGS</a></li>
+                    <li><a href="https://tvsajeev.com">AUDIO STORIES</a></li>
+                    <li><a href="https://tvsajeev.com">VISUAL STORIES</a></li>
+                </ul>
+            </nav>
+        </div>
+        <footer>
+            <button class="footer-btn">View More</button>
+            <a class="footer-img-btn" href="https://tvsajeev.com">
+                <img src="assets/arrow.png" alt="Arrow">
+            </a>
+        </footer>
+    </div>
+    <script>
+        function toggleDropdown() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
