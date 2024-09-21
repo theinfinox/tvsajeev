@@ -3,53 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr TV Sajeev</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap">    
+    <title>TV SAJEEV</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1><br>tvsajeev.in</h1>
-            <div class="mobile-nav" onclick="toggleDropdown()">
-                <div class="dots"></div>
-                <div class="dots"></div>
-                <div class="dots"></div>
-            </div>
-            <div class="mobile-menu" id="mobileMenu">
-                <ul>
-                    <li><a href="https://tvsajeev.com">HOME</a></li>
-                    <li><a href="https://tvsajeev.com">BLOGS</a></li>
-                    <li><a href="https://tvsajeev.com">PODCASTS</a></li>
-                    <li><a href="https://tvsajeev.com">VIDEOS</a></li>
-                </ul>
-            </div>
-        </header>
-        <div class="content">
-            <div class="overlay-image">
-                <img src="assets/Sajeev1 (1).png" alt="Dr TV Sajeev">
-            </div>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="https://tvsajeev.com">HOME</a></li>
-                    <li><a href="https://tvsajeev.com">BLOGS</a></li>
-                    <li><a href="https://tvsajeev.com">AUDIO STORIES</a></li>
-                    <li><a href="https://tvsajeev.com">VISUAL STORIES</a></li>
-                </ul>
-            </nav>
-        </div>
-        <footer>
-            <button class="footer-btn">View More</button>
-            <a class="footer-img-btn" href="https://tvsajeev.com">
-                <img src="assets/arrow.png" alt="Arrow">
-            </a>
-        </footer>
+
+    <header>
+        <h1>tvsajeev.in</h1>
+        <div class="nav-menu-button">&#9776;</div> <!-- Navigation button -->
+    </header>
+
+    <div class="background-container">
+        <img src="assets/unspash.png" alt="Background Image" class="background">
+        <img src="assets/Sajeev1 (1).png" alt="Person's Face" class="face">
     </div>
+
+    <nav class="arc-nav">
+        <a href="https://tvsajeev.com" class="nav-button nav-button-1">RESEARCH</a>
+        <a href="https://tvsajeev.com"" class="nav-button nav-button-2">WRITING</a>
+        <a href="https://tvsajeev.com"" class="nav-button nav-button-3">TALKS</a>
+        <a href="https://tvsajeev.com"" class="nav-button nav-button-4">INTERVIEW</a>
+        <a href="https://tvsajeev.com"" class="nav-button nav-button-5">STORIES</a>        
+    </nav>
+
+    <!-- Dropdown Menu for Mobile -->
+    <nav class="dropdown-menu">
+        <a href="https://tvsajeev.com" class="dropdown-item">RESEARCH</a>
+        <a href="https://tvsajeev.com" class="dropdown-item">WRITING</a>
+        <a href="https://tvsajeev.com" class="dropdown-item">TALKS</a>
+        <a href="https://tvsajeev.com" class="dropdown-item">INTERVIEW</a>
+        <a href="https://tvsajeev.com" class="dropdown-item">STORIES</a>
+
+    </nav>
+
+    <footer>
+        <div class="footer-buttons">
+            <button>View More</button>
+            <button class="image-button">
+                <img src="assets/arrow.png" alt="Image Button">
+            </button>
+        </div>
+    </footer>
+
     <script>
-        function toggleDropdown() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('show');
-        }
+        const navMenuButton = document.querySelector('.nav-menu-button');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        // Toggle dropdown menu visibility on click
+        navMenuButton.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('show');
+        });
     </script>
+
 </body>
 </html>
