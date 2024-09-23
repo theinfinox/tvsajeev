@@ -140,6 +140,7 @@ footer {
     width: 100%; /* Set full width to position buttons on the left */
     background: transparent;
     padding: 20px;
+    left: 20%;
     position: absolute;
     bottom: 0;
     z-index: 2;
@@ -150,14 +151,14 @@ footer {
 .footer-buttons {
     display: flex;
     gap: 0px; /* Space between the buttons */
-    padding-left: 20%;
+    padding-left: 10%;
 }
 
 footer button {
     background: none;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 0px;
     cursor: pointer;
     font-size: 1.0rem;
     font-family: 'Montserrat', sans-serif;
@@ -213,7 +214,7 @@ footer .image-button img {
 }
 
 /* Media query for tablets and phones */
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
     .arc-nav {
         display: none; /* Hide the nav buttons */
     }
@@ -231,20 +232,21 @@ footer .image-button img {
         display: block; /* Show the nav menu button */
     }
     footer {
-        width: 100%; /* Set full width */
+        width: 100%; /* Set full width to position buttons on the left */
         background: transparent;
         padding: 20px;
         position: absolute;
         bottom: 0;
         z-index: 2;
         display: flex;
-        justify-content: center; /* Center the footer buttons horizontally */
-        align-items: center; /* Vertically center the content */
+        justify-content: flex-start; /* Move footer buttons to the left */
     }
+    
     
     .footer-buttons {
         display: flex;
-        gap: 20px; /* Adjust gap between the buttons */
+        gap: 40px; /* Adjust gap between the buttons */
         justify-content: center; /* Ensure the buttons inside the container are centered */
+        padding-left: 0%;
     }
 }
