@@ -215,9 +215,26 @@ footer .image-button img {
 
 /* Media query for tablets and phones */
 @media (max-width: 1150px) {
+
+    html, body {
+        overflow: hidden; /* Prevent both x and y-axis scrolling */
+        touch-action: none; /* Disable touch scrolling */
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }    
+    
     .arc-nav {
         display: none; /* Hide the nav buttons */
     }
+
     .face {
         width: auto;
         height: 100%; /* Adjust the height of the face */
@@ -228,9 +245,11 @@ footer .image-button img {
         z-index: 1;
         margin-left: -50px; /* Move the face image slightly to the left */
     }
+
     .nav-menu-button {
         display: block; /* Show the nav menu button */
     }
+
     footer {
         width: 100%; /* Set full width to position buttons on the left */
         background: transparent;
@@ -241,12 +260,43 @@ footer .image-button img {
         display: flex;
         justify-content: flex-start; /* Move footer buttons to the left */
     }
-    
-    
+
     .footer-buttons {
         display: flex;
         gap: 40px; /* Adjust gap between the buttons */
         justify-content: center; /* Ensure the buttons inside the container are centered */
         padding-left: 0%;
+    }
+}
+
+@media (max-width: 395px) {
+
+    .nav-button {
+        white-space: nowrap; /* Prevent text from stacking */
+        font-size: 1.5rem; /* Reduce font size */
+        padding: 5px 10px; /* Adjust padding for smaller screens */
+    }
+
+    /* Further reduce font size for footer buttons */
+    footer button {
+        font-size: 0.8rem; /* Smaller font size for very small screens */
+    }
+
+    .footer-buttons {
+        gap: 20px; /* Reduce the gap between buttons */
+        justify-content: center; /* Keep buttons centered */
+    }
+
+    /* Ensure the dropdown menu fits on smaller screens */
+    .dropdown-item {
+        font-size: 1rem; /* Smaller font size for dropdown items */
+        padding: 8px 10px; /* Adjust padding */
+    }
+
+    /* Optional: You can reduce the width of buttons if necessary */
+    .nav-button {
+        max-width: 100px; /* Set a max-width for nav buttons */
+        text-overflow: ellipsis; /* Add ellipsis for overflow */
+        overflow: hidden;
     }
 }
