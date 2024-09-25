@@ -17,6 +17,7 @@ body {
     overflow: hidden; /* Prevent scrolling */
 }
 
+/* Adjust the header to accommodate the new heading container */
 header {
     position: absolute;
     top: 0;
@@ -31,13 +32,32 @@ header {
     align-items: center;
 }
 
+/* Flex column for heading container to stack h1 and h2 */
+.heading-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Optional: adjust h1 and h2 styles for better alignment */
 h1 {
+    padding-left: 20px;
+    padding-top: 60px;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 2.0rem;
+}
+
+h2 {
+    font-size: 1rem;
+    padding-left: 20px;
+    font-weight: 300;
+    color: gray; /* Adjust the color to match your theme */
+    margin-top: 5px; /* Add some space between the heading and description */
+    margin-left: 0px;
 }
 
 /* Navigation button for smaller screens */
 .nav-menu-button {
+    padding-left: 70px;
     font-size: 2rem;
     cursor: pointer;
     display: none; /* Hidden by default */
@@ -110,20 +130,25 @@ h1 {
     color: #00b000; /* Change to green on hover */
 }
 
+
+.nav-button-0 {
+
+    margin-right: 320px;
+}
 /* Control for each button's specific position */
 .nav-button-1 {
     margin-top: 80px;
-    margin-right: 250px;
+    margin-right: 200px;
 }
 
 .nav-button-2 {
     margin-top: 80px;
-    margin-right: 400px;
+    margin-right: 170px;
 }
 
 .nav-button-3 {
     margin-top: 80px;
-    margin-right: 500px;
+    margin-right: 370px;
 }
 
 .nav-button-4 {
@@ -133,7 +158,7 @@ h1 {
 
 .nav-button-5 {
     margin-top: 80px;
-    margin-right: 200px;
+    margin-right: 180px;
 }
 
 footer {
@@ -221,6 +246,19 @@ footer .image-button img {
         touch-action: none; /* Disable touch scrolling */
     }
 
+    h1 {
+        font-weight: 500;
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 0.7rem;
+        font-weight: 300;
+        color: gray; /* Adjust the color to match your theme */
+        margin-top: 5px; /* Add some space between the heading and description */
+        margin-left: 0px;
+    }      
+
     body {
         font-family: 'Montserrat', sans-serif;
         height: 100vh;
@@ -269,7 +307,7 @@ footer .image-button img {
     }
 }
 
-@media (max-width: 395px) {
+@media (max-width: 705px) {
 
     .nav-button {
         white-space: nowrap; /* Prevent text from stacking */
@@ -277,9 +315,27 @@ footer .image-button img {
         padding: 5px 10px; /* Adjust padding for smaller screens */
     }
 
+    h1 {
+        font-weight: 500;
+        font-size: 1.0rem;
+        padding-left: 0px;
+        padding-top: 0px;        
+    }
+
+    h2 {
+        font-size: 0.6rem;
+        font-weight: 300;
+        padding-left: 0px;
+        color: gray; /* Adjust the color to match your theme */
+        margin-top: 5px; /* Add some space between the heading and description */
+        margin-left: 0px;
+    }    
+    
+
+    
     /* Further reduce font size for footer buttons */
     footer button {
-        font-size: 0.8rem; /* Smaller font size for very small screens */
+        font-size: 0.6rem; /* Smaller font size for very small screens */
     }
 
     .footer-buttons {
